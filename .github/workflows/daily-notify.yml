@@ -20,7 +20,7 @@ jobs:
           node-version: 20
 
       - name: Analyze matches and send Telegram alert
-        run: node scripts/telegram-daily-notify.js
+        run: node telegram-daily-notify.js
         env:
           FOOTBALL_DATA_API_KEY: ${{ secrets.FOOTBALL_DATA_API_KEY }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
